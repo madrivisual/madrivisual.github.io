@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Madrivisual — Diseño Gráfico, Identidad Visual, Publicidad y Branding.">
+    <title>Madrivisual | Diseño Gráfico Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- INICIO -->
+    <section id="inicio">
+        <div class="contenedor">
+            <img src="logo-madrivisual.png" alt="Madrivisual — Publicidad · Diseño · Branding" class="logo-portada">
+            
+            <h1>Soluciones en Diseño Gráfico</h1>
+            <p>Transformamos tus ideas en imágenes con impacto profesional. Identidad de marca, publicidad y diseño a tu medida.</p>
+            <a href="#trabajos" class="boton-principal">Ver nuestros trabajos</a>
+        </div>
+    </section>
+
+    <!-- TRABAJOS -->
+    <section id="trabajos">
+        <div class="contenedor-seccion">
+            <h2 class="titulo-seccion">Nuestros Trabajos</h2>
+            <p class="subtitulo-seccion">Haz clic en cualquier imagen para verla completa</p>
+
+            <div class="galeria">
+                <article class="tarjeta-proyecto" onclick="abrirImagen('trabajo1.jpg')">
+                    <img src="trabajo1.jpg" alt="Identidad Visual">
+                    <h3>Identidad Visual</h3>
+                    <p>Logotipo, paleta de colores y manual de marca para tu negocio.</p>
+                </article>
+
+                <article class="tarjeta-proyecto" onclick="abrirImagen('trabajo2.jpg')">
+                    <img src="trabajo2.jpg" alt="Publicidad y Carteles">
+                    <h3>Publicidad y Carteles</h3>
+                    <p>Diseño de material promocional, volantes y contenido para redes.</p>
+                </article>
+
+                <article class="tarjeta-proyecto" onclick="abrirImagen('trabajo3.jpg')">
+                    <img src="trabajo3.jpg" alt="Ilustraciones Personalizadas">
+                    <h3>Ilustraciones a Medida</h3>
+                    <p>Ilustraciones originales adaptadas al estilo que necesitas.</p>
+                </article>
+            </div>
+
+            <a href="#contacto" class="boton-siguiente">Ir a Contacto →</a>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <div class="contenedor-seccion">
+            <h2 class="titulo-seccion">Contáctanos</h2>
+            <p class="subtitulo-seccion">Escríbenos por WhatsApp y hagamos realidad tu proyecto</p>
+
+            <div class="caja-contacto">
+                <div class="bloque-contacto">
+                    <p class="etiqueta-contacto">📞 Número 1</p>
+                    <p class="numero">959 279 398</p>
+                    <a href="https://wa.me/51959279398" target="_blank" class="boton-whatsapp">
+                        💬 Enviar mensaje
+                    </a>
+                </div>
+
+                <div class="divisor">— o —</div>
+
+                <div class="bloque-contacto">
+                    <p class="etiqueta-contacto">📞 Número 2</p>
+                    <p class="numero">972 314 272</p>
+                    <a href="https://wa.me/51972314272" target="_blank" class="boton-whatsapp">
+                        💬 Enviar mensaje
+                    </a>
+                </div>
+                
+                <p class="nota-respuesta">Te responderemos con la mayor brevedad posible ✅</p>
+            </div>
+
+            <a href="#inicio" class="enlace-volver">← Volver al inicio</a>
+        </div>
+    </section>
+
+    <!-- VISOR DE IMÁGENES -->
+    <div id="visorImagen" class="visor-imagen" onclick="cerrarImagen()">
+        <span class="cerrar">&times;</span>
+        <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        function abrirImagen(ruta) {
+            document.getElementById('imagenAmpliada').src = ruta;
+            document.getElementById('visorImagen').classList.add('activo');
+            document.body.style.overflow = 'hidden';
+        }
+        function cerrarImagen() {
+            document.getElementById('visorImagen').classList.remove('activo');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>
